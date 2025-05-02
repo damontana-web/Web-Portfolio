@@ -2,8 +2,8 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
-import tailwindcss from 'tailwindcss'
-import tailwindConfig from './tailwind.config.mjs'
+import tailwindcss from 'tailwindcss';
+import tailwindConfig from './tailwind.config.mjs';
 
 
 
