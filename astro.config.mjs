@@ -3,6 +3,10 @@ import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
+import tailwindcss from 'tailwindcss'
+import tailwindConfig from './tailwind.config.mjs'
+
+
 
 import mdx from "@astrojs/mdx";
 
@@ -117,7 +121,8 @@ export default defineConfig({
   experimental: {
     clientPrerender: true,
   },
+  
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [tailwindcss(tailwindConfig)],
   },
 });
