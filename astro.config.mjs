@@ -2,8 +2,7 @@ import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
-import tailwindcss from 'tailwindcss';
-import tailwindConfig from './tailwind.config.mjs';
+import tailwind from "@astrojs/tailwind";
 
 
 
@@ -116,12 +115,12 @@ export default defineConfig({
   }), compressor({
     gzip: false,
     brotli: true,
-  }), mdx()],
+  }),  tailwind({ // ✅ tell it to use your config
+    config: "./tailwind.config.mjs"
+  }), mdx()
+],
   experimental: {
     clientPrerender: true,
   },
   
-  vite: {
-    plugins: [tailwindcss(tailwindConfig)],
-  },
 });
