@@ -115,7 +115,7 @@ export default defineConfig({
   }), compressor({
     gzip: false,
     brotli: true,
-  }),  tailwind({ // ✅ tell it to use your config
+  }),  tailwind({ 
     config: "./tailwind.config.mjs"
   }), mdx()
 ],
