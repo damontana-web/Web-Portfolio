@@ -1,9 +1,11 @@
 // tailwind.config.mjs
 import { defineConfig } from 'tailwindcss'
+import forms from '@tailwindcss/forms'
 
 export default defineConfig({
   content: [
-    './src/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte,mdx}',
+    './src/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte}',
+    './node_modules/preline/**/*.js'
   ],
   theme: {
     extend: {
@@ -17,5 +19,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [],
+  plugins: [forms],
 });
