@@ -4,8 +4,6 @@ import compressor from "astro-compressor";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
 
-
-
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
@@ -84,9 +82,12 @@ export default defineConfig({
         autogenerate: { directory: "advanced" },
       },
     ],
-    social: {
-      github: "https://github.com/mearashadowfax/ScrewFast",
-    },
+    social: [ // Changed from an object to an array
+      { label: 'GitHub', link: 'https://github.com/mearashadowfax/ScrewFast' },
+      // You can add more social links as objects here
+      // Example for Twitter:
+      // { label: 'Twitter', link: 'https://twitter.com/your_twitter_handle' },
+    ],
     disable404Route: true,
     customCss: ["./src/assets/styles/starlight.css"],
     favicon: "/favicon.ico",
