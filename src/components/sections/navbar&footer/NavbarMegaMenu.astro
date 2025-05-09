@@ -3,12 +3,17 @@
 import NavLink from "@components/ui/links/NavLink.astro";
 import MegaMenuLink from "@components/ui/links/MegaMenuLink.astro";
 import enStrings from "@utils/navigation.ts";
-import frStrings from "@utils/fr/navigation.ts";
 import BrandLogo from "@components/BrandLogo.astro";
 
-// Select the correct translation based on the page's lang prop:
-const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
-const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
+// Replace the language selection code with just English
+const strings = enStrings;
+const homeUrl = "/";
+
+// Add this interface
+interface NavLink {
+  name: string;
+  url: string;
+}
 ---
 
 <!-- Main header component -->
@@ -81,7 +86,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
       >
         <!-- Navigation links and Authentication component -->
         {
-          strings.navBarLinks.map((link) => {
+          strings.navBarLinks.map((link: NavLink) => {
             if (link.name === "Services") {
               return <MegaMenuLink />;
             } else {

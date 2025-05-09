@@ -1,7 +1,7 @@
 // tailwind.config.js
-const forms = require('@tailwindcss/forms');
+import forms from '@tailwindcss/forms';
 
-module.exports = {
+export default {
   content: [
     './src/**/*.{astro,html,js,jsx,ts,tsx,vue,svelte}',
     './node_modules/preline/**/*.js'

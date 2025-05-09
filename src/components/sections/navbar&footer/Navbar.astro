@@ -8,6 +8,12 @@ import BrandLogo from "@components/BrandLogo.astro";
 // Select the correct translation based on the page's lang prop:
 const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
 const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
+
+// Add this interface
+interface NavLink {
+  name: string;
+  url: string;
+}
 ---
 
 <!-- Main header component -->
@@ -79,7 +85,7 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         class="mt-5 flex flex-col gap-x-0 gap-y-4 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-4 lg:gap-x-7 md:gap-y-0 md:ps-7"
       >
         <!-- Navigation links and Authentication component -->
-        {strings.navBarLinks.map(link => (
+        {strings.navBarLinks.map((link: NavLink) => (
           <NavLink url={link.url} name={link.name} />
         ))}
       </div>
