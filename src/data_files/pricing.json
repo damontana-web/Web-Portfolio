@@ -1,39 +1,36 @@
 {
   "title": "How We Can Work Together",
-  "subTitle": "Boost efficiency with ScrewFast's clear, value-driven plans.",
-  "badge": "Best value",
-  "thirdOption": "Enterprise Solutions?",
-  "btnText": "Get a Custom Quote",
+  "thirdOption": "Not sure what you need? Let’s figure it out",
+  "btnText": "Get in Touch",
 
   "starterKit": {
     "name": "Ongoing Support",
     "description": "For teams who need a plug-in creative/dev partner",
-    "price": "49",
-    "cents": ".00",
-    "billingFrequency": "USD / monthly",
     "features": [
       "Monthly retainer",
       "Quick turnarounds",
       "Great for design systems, tweaks, or dev-ready UIs"
-      
-    ],
-    "purchaseBtnTitle": "Get the Starter Kit",
-    "purchaseLink": "#"
+    ]
   },
 
   "professionalToolbox": {
     "name": "Project-Based",
     "description": "Great for full designs, landing pages, or specific feature builds",
-    "price": "89",
-    "cents": ".00",
-    "billingFrequency": "USD / monthly",
     "features": [
       "One-time scope",
       "Timeline + milestones",
       "Figma-to-code, full-stack handoff",
       "Ideal for agencies with overflow work"
-    ],
+    ]
+  },
+
+  "_notes": {
+    "subTitle": "Boost efficiency with ScrewFast's clear, value-driven plans.",
+    "badge": "Best value",
     "purchaseBtnTitle": "Get the Professional Toolbox",
-    "purchaseLink": "#"
+    "purchaseLink": "#",
+    "price": "89",
+    "cents": ".00",
+    "billingFrequency": "USD / monthly"
   }
 }
